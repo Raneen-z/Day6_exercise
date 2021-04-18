@@ -1,0 +1,15 @@
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\Day6_exr.exe
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\Day6_exr.deps.json
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\Day6_exr.runtimeconfig.json
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\Day6_exr.runtimeconfig.dev.json
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\Day6_exr.dll
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\ref\Day6_exr.dll
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\bin\Debug\net5.0\Day6_exr.pdb
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.AssemblyInfoInputs.cache
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.AssemblyInfo.cs
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.csproj.CoreCompileInputs.cache
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.dll
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\ref\Day6_exr.dll
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.pdb
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.genruntimeconfig.cache
