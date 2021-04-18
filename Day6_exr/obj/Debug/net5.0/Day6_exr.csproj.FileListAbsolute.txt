@@ -13,3 +13,4 @@ C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.dll
 C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\ref\Day6_exr.dll
 C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.pdb
 C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.genruntimeconfig.cache
+C:\Users\Ranee\source\repos\Day6_exr\Day6_exr\obj\Debug\net5.0\Day6_exr.csprojAssemblyReference.cache
