@@ -90,34 +90,116 @@ namespace Day6_exr
             }
         }
 
-        public static int [] rotate(int [] array,int count)
+        public static int [] rotate(int [] array,int count, bool direction)
         {
             while (count > 0)
             {
                 //take 
-                int temp = array[0];
-                for (int i = 0; i < array.Length; i++)
+                if (direction)
                 {
-
-                    //if you reach the end of the array put the last element on first index 
-                    if (i + 1 == array.Length)
+                    int temp = array[0];
+                    for (int i = 0; i < array.Length; i++)
                     {
-                        array[0] = temp;
-                    }
-                    // else just shift it to the right 
-                    else
-                    {
-                        int temp2 = array[i + 1];
-                        array[i + 1] = temp;
-                        temp = temp2;
-                        
-                    }
-                    
 
+                        //if you reach the end of the array put the last element on first index 
+                        if (i + 1 == array.Length)
+                        {
+                            array[0] = temp;
+                        }
+                        // else just shift it to the right 
+                        else
+                        {
+                            int temp2 = array[i + 1];
+                            array[i + 1] = temp;
+                            temp = temp2;
+
+                        }
+
+
+                    }
                 }
+                else
+                {
+                    int temp = array[array.Length-1];
+                    for (int i = array.Length-1; i >=0; i--)
+                    {
+
+                        //if you reach the end of the array put the last element on first index 
+                        if (i - 1 < 0)
+                        {
+                            array[array.Length - 1] = temp;
+                        }
+                        // else just shift it to the right 
+                        else
+                        {
+                            int temp2 = array[i - 1];
+                            array[i - 1] = temp;
+                            temp = temp2;
+
+                        }
+
+
+                    }
+                }
+                
+                
                 count--;
             }
             return array;
+        }
+
+        class HTMLBuilder
+        {
+            private string html;
+
+            public HTMLBuilder()
+            {
+                this.html = "";
+            }
+
+            public HTMLBuilder beginTag(string value)
+            {
+                this.html += "<" + value + ">";
+                return this;
+            }
+            public HTMLBuilder content(string value)
+            {
+                this.html += " "+value+" ";
+                return this;
+            }
+            public HTMLBuilder endTag(string value)
+            {
+                this.html += "</"+value+">";
+                return this;
+            }
+
+            public string get()
+            {
+                return this.html;
+            }
+        }
+        //a-m -> o
+        //n-z -> t
+        //else -> .
+        public static void whichPart(string words)
+        {
+            string str = "";
+            for (int i = 0; i < words.Length; i++)
+            {
+                if ((words[i]>='a'&&words[i]<='m')|| (words[i] >= 'A' && words[i] <= 'M'))
+                {
+                    str+= 'o';
+                }
+                else if((words[i] >= 'n' && words[i] <= 'z') || (words[i] >= 'N' && words[i] <= 'Z'))
+                {
+                    str += 't';
+                }
+                else
+                {
+                    str += '.';
+                }
+            }
+            Console.WriteLine(str);
         }
         static void Main(string[] args)
         {
@@ -126,14 +208,16 @@ namespace Day6_exr
 
             Console.WriteLine("Number of words: {0}, the word \'Hey\' appeard {1} times, number of charachters: {2}, the char \'H\' appeard {3} times, last index of \'H\' is {4}",str.numOfWords(),str.numOfXWord("Hey")
                 ,str.numOfChars(),str.numOfXChar('H'),str.lastIndexofChar('H'));
-            
+
             //////////////
-            swap("gjg rrt rtt hhh");
+            ///
+            Console.WriteLine("\n\n");
+            swap("first(I'llBe2nd) second(I'llBe1st) third forth");
             ///////////////
-            int[] values = { 1, 2, 3, 4 };
-            int [] res= rotate(values,2);
+            int[] values = { 1, 2, 3, 4, 5};
+            int [] res= rotate(values,2,false);
 
-
+            Console.WriteLine("\n\n");
             foreach (var num in res)
             {
                 Console.Write("{0} ", num);
@@ -148,10 +232,22 @@ namespace Day6_exr
                 byte[] exposedBytes = Encoding.UTF8.GetBytes(exposed);
                 byte[] hashBytes = hash.ComputeHash(exposedBytes);
                 string hashed = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-                Console.WriteLine("The SHA1 hash of {0} is: {1}", exposed, hashed);
+                Console.WriteLine("\n\nThe SHA1 hash of {0} is: {1}", exposed, hashed);
             }
-           
+            //////////////
 
+
+            // method chaining & fluent interface
+            HTMLBuilder html1 = new HTMLBuilder();
+            string htmlCode = html1.beginTag("p")
+                .content("Welcome to HTML")
+                .endTag("p").get();
+            Console.WriteLine("\n\n"+htmlCode);
+
+            ////////////
+            ///
+            Console.WriteLine("\n\nWhich part is: \nABCDENQRST@#$%%222");
+            whichPart("ABnCamDENnQRdST@#$%%222");
         }
     }
 }
