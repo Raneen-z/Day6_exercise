@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Security.Cryptography;
+using System.Text;
 namespace Day6_exr
 {
     class Program
@@ -125,8 +126,10 @@ namespace Day6_exr
 
             Console.WriteLine("Number of words: {0}, the word \'Hey\' appeard {1} times, number of charachters: {2}, the char \'H\' appeard {3} times, last index of \'H\' is {4}",str.numOfWords(),str.numOfXWord("Hey")
                 ,str.numOfChars(),str.numOfXChar('H'),str.lastIndexofChar('H'));
+            
+            //////////////
             swap("gjg rrt rtt hhh");
-
+            ///////////////
             int[] values = { 1, 2, 3, 4 };
             int [] res= rotate(values,2);
 
@@ -135,6 +138,20 @@ namespace Day6_exr
             {
                 Console.Write("{0} ", num);
             }
+
+            ///////////////
+            ///
+
+            string exposed = "Do not use your bag";
+            using (SHA1 hash = SHA1.Create())
+            {
+                byte[] exposedBytes = Encoding.UTF8.GetBytes(exposed);
+                byte[] hashBytes = hash.ComputeHash(exposedBytes);
+                string hashed = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+                Console.WriteLine("The SHA1 hash of {0} is: {1}", exposed, hashed);
+            }
+           
+
         }
     }
 }
